@@ -59,3 +59,6 @@ chmod +x "$LAUNCH_SCRIPT"
 echo "Launch script created at $LAUNCH_SCRIPT. You can add this script to Steam."
 
 echo "Setup complete!"
+
+# Prompt the user before closing
+read -p "Press Enter to close..."
