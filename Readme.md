@@ -67,4 +67,4 @@ The best solution I've found so far is to remap button inputs to the default key
     Right nudge = /
     Mechanical tilt = T
     ```
-    Navigate vpxtool using up/down arrow and enter keys.
+    Navigate vpxtool using up/down arrow and enter/esc keys.
