@@ -37,7 +37,7 @@ To use the script, download or copy `InstallVPX.sh` from the repo then make sure
 
     ```
     #!/bin/bash
-    konsole -e "./vpxtool simplefrontend"
+    konsole -e "./vpxtool frontend"
     ```
 
 - Add the launch script to Steam. (optional)
