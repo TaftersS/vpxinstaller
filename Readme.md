@@ -45,21 +45,23 @@ To use the script, download or copy `InstallVPX.sh` from the repo then make sure
     `/home/deck/VPinballX/launch.sh`
 
 
-##Controller Configuration
-The best solution I have so far is to remap button inputs to the default keyboard layout for VPX.
-My personal configuration can be found in Steam's community layouts by changing the game's name to "Visual Pinball".
+Controller Configuration
 
-Here are some of the default keyboard controls for reference:
+The best solution I've found so far is to remap button inputs to the default keyboard layout for VPX.
 
-```
-Left flipper = Left shift
-Right flipper = Right shift
-Insert coin = 5
-Start game = 1
-Plunger = Enter
-Pause menu = Escape
-Quit = Q
-Left nudge = Z
-Right nudge = /
-Mechanical tilt = T
-```
+- My personal configuration can be found in Steam's community layouts by changing the game's name to "Visual Pinball".
+
+    Here are some of the default keyboard controls for reference:
+
+    ```
+    Left flipper = Left shift
+    Right flipper = Right shift
+    Insert coin = 5
+    Start game = 1
+    Plunger = Enter
+    Pause menu = Escape
+    Quit = Q
+    Left nudge = Z
+    Right nudge = /
+    Mechanical tilt = T
+    ```
