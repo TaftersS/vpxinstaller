@@ -54,7 +54,7 @@ The best solution I've found so far is to remap button inputs to the default key
 - My personal configuration can be found in Steam's community layouts by changing the game's name to "Visual Pinball".
 
     Here are some of the default keyboard controls for reference:
-
+  
     ```
     Left flipper = Left shift
     Right flipper = Right shift
@@ -67,3 +67,4 @@ The best solution I've found so far is to remap button inputs to the default key
     Right nudge = /
     Mechanical tilt = T
     ```
+    Navigate vpxtool using up/down arrow and enter keys.
