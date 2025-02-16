@@ -49,7 +49,7 @@ To use the script, download or copy `InstallVPX.sh` from the repo then make sure
 
 ## Controller Configuration
 
-The best solution I've found so far is to remap button inputs to the default keyboard layout for VPX.
+The best solution I've found so far is to remap button inputs to the default keyboard layout for VPX using the Steam overlay.
 
 - My personal configuration can be found in Steam's community layouts by changing the game's name to "Visual Pinball".
 
