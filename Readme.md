@@ -11,7 +11,7 @@ To use the script, download or copy `InstallVPX.sh` from the repo then make sure
 - Place table files in the game's tables directory. PinMAME roms can be added by manually creating the subdirectory.
     `/home/deck/VPinballX/tables/pinmame/roms`
 
-- Tables can be launched individually from the terminal, or by adding the target to Steam. To select from an index, use vpxtool instead.
+- Tables can now be launched individually from the terminal, or by adding the target to Steam. To select from an index, use vpxtool instead.
     `VPinballX_GL -play "tables/[name]"`
 
 
@@ -21,11 +21,11 @@ To use the script, download or copy `InstallVPX.sh` from the repo then make sure
 - Extract contents to the VPX directory.
     `/home/deck/VPinballX/vpxtool`
 
-- Run the config setup command.
-    `vpxtool config setup`
+- Run the config setup command inside the same directory.
+    `./vpxtool config setup`
 
 - vpxtool can now be launched from the terminal, allowing to select and play tables from an auto generated index.
-    `vpxtool frontend`
+    `./vpxtool frontend`
 
 - Use a bash script to lauch vpxtool. (optional)
     ```
