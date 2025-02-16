@@ -52,7 +52,7 @@ LAUNCH_SCRIPT="$INSTALL_DIR/launch.sh"
 echo "Creating launch script..."
 cat <<EOL > "$LAUNCH_SCRIPT"
 #!/bin/bash
-konsole -e "./vpxtool simplefrontend"
+konsole -e "./vpxtool frontend"
 EOL
 chmod +x "$LAUNCH_SCRIPT"
 
