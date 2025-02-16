@@ -1,5 +1,5 @@
 This project provides setup instructions for VPX Standalone on Steam Deck.
-The included script performs the following installation steps automatically, and generates a Konsole launcher which can be added to Steam.
+The included script performs the following installation steps automatically, and generates a Konsole launcher for vpxtool which can be added to Steam.
 To use the script, simply download and execute it.
 
 [Visual Pinball X](https://github.com/vpinball/vpinball/):
