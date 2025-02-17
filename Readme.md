@@ -35,26 +35,23 @@ To use the script, download or copy `InstallVPX.sh` from the repo then make sure
 
     `./vpxtool frontend`
 
-- Use a bash script to lauch vpxtool. (optional)
+- Use a bash script to lauch vpxtool.
 
     ```
     #!/bin/bash
     konsole -e "./vpxtool frontend"
     ```
 
-- Add the launch script to Steam. (optional)
+- Add the launch script to Steam.
 
     `/home/deck/VPinballX/launch.sh`
 
 
 ## Controller Configuration
 
-The best solution I've found so far is to remap button inputs to the default keyboard layout for VPX using the Steam overlay.
-Note that analog stick tilt is currently causing some physics issues, so joysticks should be disabled or remapped to buttons instead.
+- My personal configuration can be found in Steam's community layouts by changing the game's name to "Visual Pinball". Alternatively, you can create your own by mapping to keyboard inputs using Steam's configuration overlay.
 
-- My personal configuration can be found in Steam's community layouts by changing the game's name to "Visual Pinball".
-
-    Here are some of the default keyboard controls for reference:
+Here are some of the default keyboard controls for reference:
   
     ```
     Left flipper = Left shift
@@ -64,8 +61,10 @@ Note that analog stick tilt is currently causing some physics issues, so joystic
     Plunger = Enter
     Pause menu = Escape
     Quit = Q
-    Left nudge = Z
-    Right nudge = /
+    Nudge right = Z
+    Nudge left = /
+    Nudge forward = Space
     Mechanical tilt = T
     ```
-    Navigate vpxtool using up/down arrow and enter/esc keys.
+
+Navigate vpxtool using up/down arrow and enter/esc keys.
