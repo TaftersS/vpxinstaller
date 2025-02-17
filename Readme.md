@@ -51,8 +51,7 @@ To use the script, download or copy `InstallVPX.sh` from the repo then make sure
 
 - My personal configuration can be found in Steam's community layouts by changing the game's name to "Visual Pinball". Alternatively, you can create your own by mapping to keyboard inputs using Steam's configuration overlay.
 
-Here are some of the default keyboard controls for reference:
-  
+    Here are some of the default keyboard controls for reference:
     ```
     Left flipper = Left shift
     Right flipper = Right shift
@@ -66,5 +65,13 @@ Here are some of the default keyboard controls for reference:
     Nudge forward = Space
     Mechanical tilt = T
     ```
+    Navigate vpxtool using up/down arrow and enter/esc keys.
 
-Navigate vpxtool using up/down arrow and enter/esc keys.
+
+## Troubleshooting
+
+-  Note that analog stick tilt and trigger inputs are currently causing some physics issues and should be disabled.
+
+-  For tables which don't automatically display the DMD, information can be found in the VPX Standalone [Readme](https://github.com/vpinball/vpinball/blob/master/standalone/README.md#my-game-is-not-displaying-a-dmd)
+
+-  For tables which produce a script error when launching, check out [vpx-standalone-scripts](https://github.com/jsm174/vpx-standalone-scripts)
