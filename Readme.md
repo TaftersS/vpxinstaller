@@ -14,6 +14,7 @@ The included script generates an uninstaller (uninstall.sh) and Konsole launcher
 - Copy table and ROM files to your chosen directory.
 
 - When finished, add the launch script to Steam.
+
     `VPinballX/launch.sh`
 
 ## Controller Configuration
@@ -39,6 +40,7 @@ The included script generates an uninstaller (uninstall.sh) and Konsole launcher
 ## Uninstallation
 
 - Run the uninstall script in Konsole.
+
     `VPinballX/uninstall.sh`
 
 ## Troubleshooting
