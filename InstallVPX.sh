@@ -75,7 +75,7 @@ echo "$PINMAME"
 echo "$VPXTOOL_CFG"
 echo "$HOME/.vpinball"
 
-read -p "Are you sure you want to uninstall Visual Pinball X and VPXTool? (y/n): " confirm
+read -p "Are you sure you want to uninstall Visual Pinball X and vpxtool? (y/n): " confirm
 if [[ "\$confirm" != "y" ]]; then
     echo "Uninstallation cancelled."
     exit 1
@@ -83,7 +83,7 @@ fi
 
 echo "Proceeding with uninstallation..."
 rm -rf "$INSTALL" "$PINMAME" "$VPXTOOL_CFG" "$HOME/.vpinball"
-echo "Uninstallation complete!"
+echo "Uninstallation complete! (This window can be closed.)"
 EOL
 chmod +x "$INSTALL/uninstall.sh"
 
