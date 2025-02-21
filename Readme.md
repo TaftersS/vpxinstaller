@@ -16,6 +16,7 @@ The included script generates an uninstaller (uninstall.sh) and Konsole launcher
 - Copy table and ROM files to your chosen directory.
 
   ![Default tables directory](/screenshot/Screenshot_20250219_204643.png)
+  
   ![Default PinMAME directory](/screenshot/Screenshot_20250219_204451.png)
 
 - When finished, add the launch script to Steam.
