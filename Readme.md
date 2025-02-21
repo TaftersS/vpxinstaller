@@ -53,8 +53,8 @@ The script generates an uninstaller (uninstall.sh) and Konsole launcher for [vpx
 
 - Note that analog stick tilt and trigger inputs are currently causing some physics issues and should be disabled.
 
-- For tables which don't automatically display the DMD, information can be found in the VPX Standalone [Readme](https://github.com/vpinball/vpinball/blob/master/standalone/README.md#my-game-is-not-displaying-a-dmd)
+- For tables which don't automatically display the DMD, information can be found in the VPX Standalone [Readme](https://github.com/vpinball/vpinball/blob/master/standalone/README.md#my-game-is-not-displaying-a-dmd).
 
-- For tables which produce a script error when launching, check out [vpx-standalone-scripts](https://github.com/jsm174/vpx-standalone-scripts)
+- For tables which produce a script error when launching, check out [vpx-standalone-scripts](https://github.com/jsm174/vpx-standalone-scripts).
 
 - If vpxtool reports missing nvram for working PinMAME tables, select "Force reload" from the table launch menu.
