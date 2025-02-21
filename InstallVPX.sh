@@ -1,16 +1,29 @@
 #!/bin/bash
 
+# Fetch latest release URLs dynamically
+VPX_URL=$(curl -s https://api.github.com/repos/vpinball/vpinball/releases/latest | grep "browser_download_url.*linux-x64.zip" | cut -d '"' -f 4)
+VPXTOOL_URL=$(curl -s https://api.github.com/repos/francisdb/vpxtool/releases/latest | grep "browser_download_url.*Linux-x86_64-musl.*.tar.gz" | cut -d '"' -f 4)
+
 # Prompt user for installation directory or use default
 default_dir="$HOME/VPinballX"
 echo "Enter installation directory (Press enter to use default: $default_dir):"
 read install_dir
-INSTALL_DIR=${install_dir:-$default_dir}
+INSTALL=${install_dir:-$default_dir}
 
-VPX_URL="https://github.com/vpinball/vpinball/releases/download/v10.8.0-2051-28dd6c3/VPinballX_GL-10.8.0-2052-5a81d4e-Release-linux-x64.zip"
-VPXTOOL_URL="https://github.com/francisdb/vpxtool/releases/download/v0.19.1/vpxtool-Linux-x86_64-musl-v0.19.1.tar.gz"
+# Prompt user for PinMAME directory
+default_pinmame_dir="$HOME/.pinmame"
+echo "Choose path for PinMAME: ($default_pinmame_dir) or local ($INSTALL/tables/pinmame)? (g/l, default: g):"
+read pinmame_choice
+if [[ "$pinmame_choice" == "l" ]]; then
+    PINMAME="$INSTALL/tables/pinmame"
+else
+    PINMAME="$default_pinmame_dir"
+fi
 
-# Create the installation directory
-mkdir -p "$INSTALL_DIR/tables/pinmame/roms"
+# Create the installation and PinMAME directory
+mkdir -p "$INSTALL"
+mkdir -p "$PINMAME/roms"
+mkdir -p "$PINMAME/ini"
 
 # Download and extract Visual Pinball X
 echo "Downloading Visual Pinball X..."
@@ -25,30 +38,57 @@ echo "Extracting tar.gz file..."
 tar -xzf /tmp/vpx_extracted/*.tar.gz -C /tmp/vpx_extracted_contents
 
 echo "Moving extracted files..."
-mv /tmp/vpx_extracted_contents/* "$INSTALL_DIR"
+mv /tmp/vpx_extracted_contents/* "$INSTALL"
 rm -r /tmp/vpx.zip /tmp/vpx_extracted /tmp/vpx_extracted_contents
 
-echo "Visual Pinball X installed to $INSTALL_DIR"
+echo "Visual Pinball X installed to $INSTALL"
 
 # Run VPinballX_GL to configure VPX
 echo "Configuring Visual Pinball X..."
-cd "$INSTALL_DIR" && ./VPinballX_GL
+cd "$INSTALL" && ./VPinballX_GL
 
-# Download and extract vpxtool (optional)
+# Download and extract vpxtool
 echo "Downloading vpxtool..."
 wget -O /tmp/vpxtool.tar.gz "$VPXTOOL_URL"
 echo "Extracting..."
-mkdir -p "$INSTALL_DIR/vpxtool"
-tar -xzf /tmp/vpxtool.tar.gz -C "$INSTALL_DIR"
+mkdir -p "$INSTALL/vpxtool"
+tar -xzf /tmp/vpxtool.tar.gz -C "$INSTALL"
 rm /tmp/vpxtool.tar.gz
 
 echo "Running vpxtool setup..."
-cd "$INSTALL_DIR" && ./vpxtool config setup
+cd "$INSTALL" && ./vpxtool config setup
 
 echo "vpxtool installed and configured."
 
+# Determine VPXTool configuration file location
+VPXTOOL_CFG=${HOME}/.config/vpxtool.cfg
+VPXTOOL_CFG=${VPXTOOL_CFG:-$INSTALL/vpxtool.cfg}
+
+# Create an uninstall script
+echo "Creating uninstall script..."
+cat <<EOL > "$INSTALL/uninstall.sh"
+#!/bin/bash
+
+echo "Warning: The following paths will be removed:"
+echo "$INSTALL"
+echo "$PINMAME"
+echo "$VPXTOOL_CFG"
+echo "$HOME/.vpinball"
+
+read -p "Are you sure you want to uninstall Visual Pinball X and VPXTool? (y/n): " confirm
+if [[ "\$confirm" != "y" ]]; then
+    echo "Uninstallation cancelled."
+    exit 1
+fi
+
+echo "Proceeding with uninstallation..."
+rm -rf "$INSTALL" "$PINMAME" "$VPXTOOL_CFG" "$HOME/.vpinball"
+echo "Uninstallation complete!"
+EOL
+chmod +x "$INSTALL/uninstall.sh"
+
 # Create launch script for vpxtool
-LAUNCH_SCRIPT="$INSTALL_DIR/launch.sh"
+LAUNCH_SCRIPT="$INSTALL/launch.sh"
 echo "Creating launch script..."
 cat <<EOL > "$LAUNCH_SCRIPT"
 #!/bin/bash
@@ -56,9 +96,7 @@ konsole -e "./vpxtool frontend"
 EOL
 chmod +x "$LAUNCH_SCRIPT"
 
-echo "Launch script created at $LAUNCH_SCRIPT. You can add this script to Steam."
+echo "Launch script created at $LAUNCH_SCRIPT. This script can be added to Steam."
 
-echo "Setup complete!"
-
-# Prompt the user before closing
-read -p "Press Enter to close..."
+# Display completion message
+read -p "Installation complete! (This window can be closed.)"
