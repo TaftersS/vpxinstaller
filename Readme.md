@@ -5,22 +5,22 @@ The included script generates an uninstaller (uninstall.sh) and Konsole launcher
 
 ## Installation
 
-- Copy or download [InstallVPX.sh](https://github.com/M0J0144/vpxinstaller/blob/main/InstallVPX.sh).
+- Copy or download [InstallVPX.sh](/InstallVPX.sh).
 
 - Grant the installer executable permission in file properties.
 
-  ![Checkbox on permissions tab](https://github.com/M0J0144/vpxinstaller/blob/main/screenshot/Screenshot_20250219_201345.png?raw=true)
+  ![Checkbox on permissions tab](/screenshot/Screenshot_20250219_201345.png)
 
 - Right click to run the installer in Konsole, and follow the prompts (press enter for defaults).
 
 - Copy table and ROM files to your chosen directory.
 
-  ![Default tables directory](https://github.com/M0J0144/vpxinstaller/blob/main/screenshot/Screenshot_20250219_204643.png?raw=true)
-  ![Default PinMAME directory](https://github.com/M0J0144/vpxinstaller/blob/main/screenshot/Screenshot_20250219_204451.png)
+  ![Default tables directory](/screenshot/Screenshot_20250219_204643.png)
+  ![Default PinMAME directory](/screenshot/Screenshot_20250219_204451.png)
 
 - When finished, add the launch script to Steam.
 
-  ![Add to Steam](https://github.com/M0J0144/vpxinstaller/blob/main/screenshot/Screenshot_20250219_203227-1.png?raw=true)
+  ![Add to Steam](/screenshot/Screenshot_20250219_203227-1.png)
 
 ## Controller Configuration
 
