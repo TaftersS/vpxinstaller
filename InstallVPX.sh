@@ -60,10 +60,6 @@ cd "$INSTALL" && ./vpxtool config setup
 
 echo "vpxtool installed and configured."
 
-# Determine VPXTool configuration file location
-VPXTOOL_CFG=${HOME}/.config/vpxtool.cfg
-VPXTOOL_CFG=${VPXTOOL_CFG:-$INSTALL/vpxtool.cfg}
-
 # Create an uninstall script
 echo "Creating uninstall script..."
 cat <<EOL > "$INSTALL/uninstall.sh"
@@ -72,7 +68,7 @@ cat <<EOL > "$INSTALL/uninstall.sh"
 echo "WARNING - The following paths will be removed:"
 echo "$INSTALL"
 echo "$PINMAME"
-echo "$VPXTOOL_CFG"
+echo "$HOME/.config/vpxtool.cfg"
 echo "$HOME/.vpinball"
 
 read -p "Are you sure you want to uninstall Visual Pinball X and vpxtool? (y/n): " confirm
