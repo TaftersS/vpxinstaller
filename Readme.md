@@ -1,7 +1,7 @@
 ## Description
 
 This project provides an installation shell script for [Visual Pinball X](https://github.com/vpinball/vpinball/) on Steam Deck.
-The script generates an uninstaller (uninstall.sh) and Konsole launcher for [vpxtool](https://github.com/francisdb/vpxtool) which can be added to Steam (launch.sh).
+The script also generates an uninstaller (uninstall.sh) and Konsole launcher for [vpxtool](https://github.com/francisdb/vpxtool) which can be added to Steam (launch.sh).
 
 ## Installation
 
