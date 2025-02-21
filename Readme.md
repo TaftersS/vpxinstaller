@@ -11,7 +11,7 @@ The script generates an uninstaller (uninstall.sh) and Konsole launcher for [vpx
 
   ![Checkbox on permissions tab](/screenshot/Screenshot_20250219_201345.png)
 
-- Right click to run the installer in Konsole, and follow the prompts (press enter for defaults).
+- Run the installer in Konsole, and follow the prompts (press enter for defaults).
 
 - Copy table and ROM files to your chosen directory.
 
