@@ -5,7 +5,7 @@ The script generates an uninstaller (uninstall.sh) and Konsole launcher for [vpx
 
 ## Installation
 
-- Copy or download [InstallVPX.sh](/InstallVPX.sh?raw=true).
+- Copy or download [InstallVPX.sh](/InstallVPX.sh).
 
 - Grant the installer executable permission in file properties.
 
