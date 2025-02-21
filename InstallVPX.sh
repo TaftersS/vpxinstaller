@@ -69,7 +69,7 @@ echo "Creating uninstall script..."
 cat <<EOL > "$INSTALL/uninstall.sh"
 #!/bin/bash
 
-echo "Warning: The following paths will be removed:"
+echo "WARNING - The following paths will be removed:"
 echo "$INSTALL"
 echo "$PINMAME"
 echo "$VPXTOOL_CFG"
@@ -83,7 +83,7 @@ fi
 
 echo "Proceeding with uninstallation..."
 rm -rf "$INSTALL" "$PINMAME" "$VPXTOOL_CFG" "$HOME/.vpinball"
-echo "Uninstallation complete! (This window can be closed.)"
+read -p "Uninstallation complete!"
 EOL
 chmod +x "$INSTALL/uninstall.sh"
 
@@ -99,4 +99,4 @@ chmod +x "$LAUNCH_SCRIPT"
 echo "Launch script created at $LAUNCH_SCRIPT. This script can be added to Steam."
 
 # Display completion message
-read -p "Installation complete! (This window can be closed.)"
+read -p "Installation complete!"
