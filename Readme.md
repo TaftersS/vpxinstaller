@@ -28,7 +28,8 @@ The included script generates an uninstaller (uninstall.sh) and Konsole launcher
 - My personal configuration can be found in Steam's community layouts by changing the game's name to "Visual Pinball". Alternatively, you can create your own by mapping to keyboard inputs using Steam's configuration overlay.
 
     Here are some of the default keyboard controls for reference:
-    ```
+
+  `
     Left flipper = Left shift
     Right flipper = Right shift
     Insert coin = 5
@@ -40,7 +41,7 @@ The included script generates an uninstaller (uninstall.sh) and Konsole launcher
     Nudge left = /
     Nudge forward = Space
     Mechanical tilt = T
-    ```
+  `
     Navigate vpxtool using up/down arrow and enter/esc keys.
 
 ## Uninstallation
