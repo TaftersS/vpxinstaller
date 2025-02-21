@@ -1,51 +1,20 @@
-## vpxinstaller
+## Description
 
-This project provides setup instructions for VPX Standalone on Steam Deck.
-The included script performs the following installation steps automatically, and generates a Konsole launcher for vpxtool which can be added to Steam.
-To use the script, download or copy `InstallVPX.sh` from the repo then make sure it is executable in file permissions and run it in Konsole.
+This project provides an installation shell script for [Visual Pinball X](https://github.com/vpinball/vpinball/) on Steam Deck.
+The included script generates an uninstaller (uninstall.sh) and Konsole launcher for [vpxtool](https://github.com/francisdb/vpxtool) which can be added to Steam (launch.sh).
 
-## [Visual Pinball X](https://github.com/vpinball/vpinball/):
-- Download the linux-x64 release [package](https://github.com/vpinball/vpinball/releases).
+## Installation
 
-- Extract the tar.gz file contents to directory of your choice. Rename the output folder for legibility.
+- Copy or download [InstallVPX.sh](https://github.com/M0J0144/vpxinstaller/blob/main/InstallVPX.sh).
 
-    `/home/deck/VPinballX`
+- Grant the installer executable permission in file properties.
 
-- Place table files in the game's tables directory. PinMAME roms can be added by manually creating the subdirectory.
+- Run the installer in Konsole, and follow the prompts (press enter for defaults).
 
-    `/home/deck/VPinballX/tables/pinmame/roms`
+- Copy table and ROM files to your chosen directory.
 
-- Tables can now be launched individually from the terminal, or by adding the target to Steam. To select from an index, use vpxtool instead.
-
-    `VPinballX_GL -play "tables/[name]"`
-
-
-## [vpxtool](https://github.com/francisdb/vpxtool):
-- Download the Linux-x86_64 release [package](https://github.com/francisdb/vpxtool/releases).
-
-- Extract contents to the VPX directory.
-
-    `/home/deck/VPinballX/vpxtool`
-
-- Run the config setup command inside the same directory.
-
-    `./vpxtool config setup`
-
-- vpxtool can now be launched from the terminal, allowing to select and play tables from an auto generated index.
-
-    `./vpxtool frontend`
-
-- Use a bash script to lauch vpxtool.
-
-    ```
-    #!/bin/bash
-    konsole -e "./vpxtool frontend"
-    ```
-
-- Add the launch script to Steam.
-
-    `/home/deck/VPinballX/launch.sh`
-
+- When finished, add the launch script to Steam.
+    `VPinballX/launch.sh`
 
 ## Controller Configuration
 
@@ -67,13 +36,17 @@ To use the script, download or copy `InstallVPX.sh` from the repo then make sure
     ```
     Navigate vpxtool using up/down arrow and enter/esc keys.
 
+## Uninstallation
+
+- Run the uninstall script in Konsole.
+    `VPinballX/uninstall.sh`
 
 ## Troubleshooting
 
--  Note that analog stick tilt and trigger inputs are currently causing some physics issues and should be disabled.
+- Note that analog stick tilt and trigger inputs are currently causing some physics issues and should be disabled.
 
--  For tables which don't automatically display the DMD, information can be found in the VPX Standalone [Readme](https://github.com/vpinball/vpinball/blob/master/standalone/README.md#my-game-is-not-displaying-a-dmd)
+- For tables which don't automatically display the DMD, information can be found in the VPX Standalone [Readme](https://github.com/vpinball/vpinball/blob/master/standalone/README.md#my-game-is-not-displaying-a-dmd)
 
--  For tables which produce a script error when launching, check out [vpx-standalone-scripts](https://github.com/jsm174/vpx-standalone-scripts)
+- For tables which produce a script error when launching, check out [vpx-standalone-scripts](https://github.com/jsm174/vpx-standalone-scripts)
 
--  If vpxtool reports missing nvram for working PinMAME tables, select "Force reload" from the table launch menu.
+- If vpxtool reports missing nvram for working PinMAME tables, select "Force reload" from the table launch menu.
